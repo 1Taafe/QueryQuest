@@ -8,11 +8,30 @@
 import SwiftUI
 
 struct TaskView: View {
+    
+    let task: Task
+    let taskOrder: Int
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack{
+            Form{
+                Section{
+                    LabeledContent("ID задания", value: "\(task.id)")
+                    LabeledContent("ID олимпидаы", value: "\(task.olympicsId)")
+                } header: {
+                    Text("Информация")
+                }
+                Section{
+                    Text(task.title)
+                } header: {
+                    Text("Задание")
+                }
+            }
+            .navigationTitle(Text("Задание №\(taskOrder)"))
+        }
     }
 }
 
 #Preview {
-    TaskView()
+    TaskView(task: Task(id: 1, olympicsId: 1001, title: "Example Task", solution: "Example Solution", image: "example_image"), taskOrder: 1)
 }

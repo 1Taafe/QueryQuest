@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct Creator{
+    var id: Int
+    var email: String
+    var password: String
+    var surname: String
+    var name: String
+    var phone: String?
+    var course: String?
+    var group: String?
+    var roleId: Int
+}

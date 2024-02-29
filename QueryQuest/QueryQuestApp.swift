@@ -11,7 +11,7 @@ import SwiftUI
 struct QueryQuestApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView(viewModel: LoginViewModel(authService: AuthService()))
         }
     }
 }

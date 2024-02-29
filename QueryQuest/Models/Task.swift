@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct Task{
+    var id: Int
+    var olympicsId: Int
+    var title: String
+    var solution: String
+    var image: String?
+}

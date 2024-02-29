@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct Result {
+    var totalScore: Int
+    var maxTime: Date
+    var userId: Int
+    var place: Int
+}
